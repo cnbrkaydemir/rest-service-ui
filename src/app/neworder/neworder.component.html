@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="container">
+ <h1> Create New Order </h1>
+</div>
+
+<div class="container">
+
+</div>
+
+
+<div class="container-form">
+  <span class="text-success" *ngIf="model.orderId">Your Order is Created.  ID is {{model.orderId}}</span>
+  <form (ngSubmit)="orderForm.valid && createOrder(orderForm)" #orderForm="ngForm">
+    <div class="form-group">
+      <label for="orderName">Order Name</label>
+      <input type="text" class="form-control" id="orderName"  placeholder="Enter Order Name">
+      <small id="emailHelp" class="form-text text-muted">Simply enter the name of your order.</small>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" placeholder="Order Price">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Make sure you want to add this order</label>
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>

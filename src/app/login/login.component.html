@@ -1,0 +1,40 @@
+
+
+  <app-header></app-header>
+
+
+<div class="container">
+  <H1>Welcome to our Login Page !</H1>
+
+</div>
+
+<form (ngSubmit)="loginForm.valid && validateUser(loginForm)" class="login100-form validate-form p-l-55 p-r-55 p-t-140" #loginForm="ngForm">
+<div class="container">
+
+  <div class="form-outline mb-4">
+    User Name: <input type="text" name="username" [(ngModel)]="model.userName" #userName="ngModel" class="form-control" required>
+   </div>
+   
+
+<div class="form-outline mb-4">
+    Password  : <input type="password" name="password" [(ngModel)]="model.userPassword" #userPassword="ngModel" class="form-control" required>
+</div>
+
+
+<div class="col text-center">
+  <button class="btn btn-dark btn-lg" id="btn">Login</button>
+</div>
+    
+<div class="text-center">
+  <p>Not a member? <a routerLink="/signup">Register</a></p>
+</div>
+
+  </div>
+
+</form>
+
+
+
+
+
+
